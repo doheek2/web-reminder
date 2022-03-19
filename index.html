@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/clock.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Noto+Sans+KR:wght@300&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form id="login-form">
+            <p id="login-title">What is your name?</p>
+            <input type="text" maxlength="15" placeholder="Write your name!" required />
+        </form>
+        <form id="main-form" class="hidden">
+            <header>
+                <p class="greeting"></p>
+                <p class="line">Have a Good Day :D</p>
+            </header>
+            <nav>
+                <button id="logout">LOGOUT</button>
+            </nav>
+            <main>
+                <article class="clock-area">
+                    <div id="clockContainer">
+                        <div class="number" id="clock3">&#9866;</div>
+                        <div class="number" id="clock6">&#8739;</div>
+                        <div class="number" id="clock9">&#9866;</div>
+                        <div class="number" id="clock12">&#8739;</div>
+                        <div id="dot"></div>
+                        <div id="hour"></div>
+                        <div id="minute"></div>
+                        <div id="second"></div>
+                    </div>
+                    <div id="digitalClockContainer">
+                        <span id="digitalClock">00:00</span>
+                    </div>
+                </article>
+                <article class="weather-area">
+
+                </article>
+                <article class="quote-area">
+                    <img class="img"/>
+                    <div id="quotes">
+                        <span id="quote"></span>
+                        <br>
+                        <span id="author"></span>
+                    </div>
+                </article>
+                <article class="todo-area">
+
+                </article>
+            </main>
+        </form>
+        <footer class="footer">
+            <span>Copyright 2022. DoHee Kang. All Rights Reserved.</span>
+        </footer>
+    </div>
+    <script src="js/greeting.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/quote.js"></script>
+</body>
+</html>
