@@ -17,16 +17,13 @@
     <div class="container">
         <form id="login-form">
             <p id="login-title">What is your name?</p>
-            <input type="text" maxlength="15" placeholder="Write your name!" required />
+            <input id="login-input" type="text" maxlength="15" placeholder="Write your name!" autocomplete="off" autofocus required />
         </form>
-        <form id="main-form" class="hidden">
+        <div id="main-form" class="hidden">
             <header>
                 <p class="greeting"></p>
                 <p class="line">Have a Good Day :D</p>
             </header>
-            <nav>
-                <button id="logout">LOGOUT</button>
-            </nav>
             <main>
                 <article class="clock-area">
                     <div id="clockContainer">
@@ -40,11 +37,19 @@
                         <div id="second"></div>
                     </div>
                     <div id="digitalClockContainer">
-                        <span id="digitalClock">00:00</span>
+                        <span id="digitalClock">00 : 00</span>
                     </div>
                 </article>
                 <article class="weather-area">
-
+                    <div class="weather1">
+                        <img id="weatherIcon" />
+                        <span id="temp">00&deg;</span>
+                    </div>
+                    <div class="weather2">
+                        <span id="weather">Clear</span>
+                        <br><br>
+                        <span id="city">location</span>
+                    </div>
                 </article>
                 <article class="quote-area">
                     <img class="img"/>
@@ -55,10 +60,21 @@
                     </div>
                 </article>
                 <article class="todo-area">
-
+                    <div id="todo-title">
+                        <span>What do I need to do today?</span>
+                    </div>
+                    <div id="todo-content">
+                        <form id="todo-form">
+                            <input id="todo-input" type="text" placeholder="Write down what you need to do and press Enter." required autocomplete="off" autofocus/>
+                        </form>
+                        <div class="scroll">
+                            <ul id="todo-list">
+                            </ul>
+                        </div>
+                    </div>
                 </article>
             </main>
-        </form>
+        </div>
         <footer class="footer">
             <span>Copyright 2022. DoHee Kang. All Rights Reserved.</span>
         </footer>
@@ -67,5 +83,7 @@
     <script src="js/clock.js"></script>
     <script src="js/background.js"></script>
     <script src="js/quote.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/todo.js"></script>
 </body>
 </html>

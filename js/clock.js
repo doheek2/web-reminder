@@ -16,7 +16,7 @@ function getClock() {
 
     let digitalHr = String(hr).padStart(2, "0");
     let digitalMin = String(min).padStart(2, "0");
-    digitalClock.innerText = `${digitalHr}:${digitalMin}`;
+    digitalClock.innerText = `${digitalHr} : ${digitalMin}`;
 }
 
 getClock();

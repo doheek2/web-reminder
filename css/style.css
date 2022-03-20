@@ -4,6 +4,7 @@
     --gray: #D9D9D9;
     --yellow: #F8EAD1;
     --blue: #D1EDF8;
+    --red: #F8D6D1;
 }
 
 /* common */
@@ -12,6 +13,7 @@
 html { height: 100%; }
 body {  
     font-family: 'Noto Sans KR', sans-serif; 
+    color: var(--black);
     background-color: var(--white);
     min-height: 100%;
 }
@@ -26,19 +28,21 @@ body {
 }
 
 input {
-    width: 450px;
-    height: 50px;
-    font-size: 30px;
-    text-align: center;
     background-color: var(--white);
     color: var(--black);
     border: 0 solid;
     border-bottom: 2px solid var(--black);
-    font-family: 'Noto Sans KR', sans-serif;
 }
 
 input:focus {
     outline: none;
+}
+
+#login-input {
+    width: 450px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
 }
 
 #login-title { 
@@ -105,6 +109,45 @@ main {
     margin-left: 290px;
 }
 
+.weather1, .weather2 {
+    position: relative; 
+    width: 250px;
+    height: 125px;
+}
+
+.weather2 {
+    margin-top: 30px; 
+    text-align: center;
+}
+
+#weatherIcon {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+#temp {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 150px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#city, #weather {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#weather {
+    background-color: var(--blue);
+}
+
 .quote-area {
     width: 540px;
     height: 250px;
@@ -144,6 +187,59 @@ main {
     position: absolute;
     margin-left: 580px;
     margin-top: -256px;
+}
+
+#todo-title {
+    width: 550px;
+    height: 70px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#todo-title span{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    background-color: var(--red);
+}
+
+#todo-content {
+    width: 550px;
+    height: 440px;
+}
+
+#todo-input {
+    width: 433px;
+    height: 20px;
+    margin-left: 55px;
+}
+
+.scroll {
+    width: 460px;
+    height: 400px;
+    margin-left: 30px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+#todo-list {
+    width: 440px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 55px;
+    margin-bottom: 20px;
+}
+
+.todo-li {
+    height: 35px;
+}
+
+.delete-btn {
+    width: 10px;
+    height: 10px;
 }
 
 footer {

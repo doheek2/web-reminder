@@ -22,12 +22,6 @@ function paintMainForm(username) {
     footer.classList.add(HIDDEN_CLASSNAME);
 }
 
-function onClicklogOut() {
-    localStorage.removeItem(USERNAME_KEY);
-    loginForm.classList.remove(HIDDEN_CLASSNAME);
-    mainForm.classList.add(HIDDEN_CLASSNAME);
-}
-
 const savedUserName = localStorage.getItem(USERNAME_KEY);
 
 if(savedUserName === null) {
@@ -35,5 +29,3 @@ if(savedUserName === null) {
 } else {
     paintMainForm(savedUserName);
 }
-
-logout.addEventListener("click", onClicklogOut);
